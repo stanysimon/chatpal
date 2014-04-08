@@ -1,0 +1,194 @@
+body {
+font-family: Helvetica;
+}
+
+h1 {
+#text-align: center;
+}
+
+.mainframe{
+background-color:rgb(191,236,215);
+width:80%;
+height:100%;
+margin-right:auto;
+margin-left:auto;
+
+}
+
+
+.hidden {
+display: none;
+}
+
+#log {
+padding: 10px;
+}
+
+.messagebox {
+color: rgb(216,203,201);
+}
+
+.responsebox {
+	
+    width:249px;
+    height:299px;
+    background-color:Gray;
+    overflow: auto;
+    overflow-y: scroll;
+    max-width:230px;
+    max-height:100px;
+
+}
+
+.birdie:hover { 
+-webkit-transform: rotate(360deg); 
+-moz-transform: rotate(360deg); 
+-o-transform: rotate(360deg);
+-ms-transform: rotate(360deg); 
+}
+
+.birdie:hover {
+-webkit-transition: all 1s ease-in-out;
+-moz-transition: all 1s ease-in-out; 
+-o-transition: all 1s ease-in-out; 
+-ms-transition: all 1s ease-in-out; 
+}
+
+.oval-quotes {
+  position:relative;
+  width:168px;
+  height:150px;
+  margin:2em auto 10px;
+  color:#000;
+  background:rgba(11, 98, 164, 0.47);
+  /* css3 */
+  /*
+  NOTES:
+  -webkit-border-radius:Apx Bpx; // produces oval in safari 4 and chrome 4
+  -webkit-border-radius:Apx / Bpx; // produces oval in chrome 4 (again!) but not supported in safari 4
+  Not correct application of the current spec, therefore, using longhand to avoid future problems with webkit corrects this
+  */
+  -webkit-border-top-left-radius:400px 350px;
+  -webkit-border-top-right-radius:400px 350px;
+  -webkit-border-bottom-right-radius:400px 350px;
+  -webkit-border-bottom-left-radius:400px 350px;
+  -moz-border-radius:400px / 350px;
+  border-radius:400px / 350px;
+}
+
+/* creates opening quotation mark */
+.oval-quotes:before {
+  content:"\201C";
+  position:absolute;
+  z-index:1;
+  top:-2px;
+  left:-21px;
+  font:80px/1 Georgia, serif;
+  color:rgb(11,98,164);
+}
+
+/* creates closing quotation mark */
+.oval-quotes:after {
+  content:"\201D";
+  position:absolute;
+  z-index:1;
+  bottom:0;
+  right:-38px;
+  font:80px/0.25 Georgia, serif;
+  color:rgb(11,98,164);
+}
+
+.oval-quotes p {
+  width:250px;
+  height:241px;
+  padding:50px 0 0;
+  margin-left:17px;
+  font-size:25px;
+  color: rgb(11,98,164);
+  font-family: 'just_me_again_down_hereRg';
+}
+
+/* creates smaller curve */
+.oval-quotes p:before {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  bottom:-30px;
+  right:55%;
+  width:180px; /* wider than necessary to make it look a bit better in IE8 */
+  height:60px;
+  background:#fff; /* need this for webkit - bug in handling of border-radius */
+  /* css3 */
+  -webkit-border-bottom-right-radius:40px 50px;
+  -moz-border-radius-bottomright:40px 50px;
+  border-bottom-right-radius:40px 50px;
+  /* using translate to avoid undesired appearance in CSS2.1-capabable but CSS3-incapable browsers */
+  -webkit-transform:translate(-30px, -2px);
+  -moz-transform:translate(-30px, -2px);
+  -ms-transform:translate(-30px, -2px);
+  -o-transform:translate(-30px, -2px);
+  transform:translate(-30px, -2px);
+}
+
+/* creates larger curve */
+.oval-quotes p:after {
+  content:"";
+  position:absolute;
+  z-index:-2;
+  bottom:-30px;
+  right:25%;
+  height:80px;
+  border-right:200px solid #ffed26;
+  background:#ffed26; /* need this for webkit - bug in handling of border-radius */
+  /* css3 */
+  -webkit-border-bottom-right-radius:200px 100px;
+  -moz-border-radius-bottomright:200px 100px;
+  border-bottom-right-radius:200px 100px;
+  /* using translate to avoid undesired appearance in CSS2.1-capabable but CSS3-incapable browsers */
+  -webkit-transform:translate(0, -2px);
+  -moz-transform:translate(0, -2px);
+  -ms-transform:translate(0, -2px);
+  -o-transform:translate(0, -2px);
+  transform:translate(0, -2px);
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+}
+
+.oval-quotes + p {
+  position:relative; /* part of the IE8 width compromise */
+  width:150px;
+  margin:0 0 2em;
+  font-size:18px;
+  font-weight:bold;
+}
+
+@font-face {
+    font-family: 'just_me_again_down_hereRg';
+    src: url('gen_fonts/justmeagaindownhere-webfont.eot');
+    src: url('gen_fonts/justmeagaindownhere-webfont.eot?#iefix') format('embedded-opentype'),
+         url('gen_fonts/justmeagaindownhere-webfont.woff') format('woff'),
+         url('gen_fonts/justmeagaindownhere-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'courgetteregular';
+    src: url('gen_fonts/courgette-regular-webfont.eot');
+    src: url('gen_fonts/courgette-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('gen_fonts/courgette-regular-webfont.woff') format('woff'),
+         url('gen_fonts/courgette-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.online{
+	color:'yellowgreen';
+}
+
+.offline{
+	color:'white';
+}

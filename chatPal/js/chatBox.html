@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="hello.css">
+		<script src="./scripts/jquery.js"></script>
+	</head>
+<body>
+	<div class="mainframe">
+	
+	<button name="Disconnect" onclick="disconnect()">Disconnect</button>
+	<button name="Presence" onclick="sendpresence()">Send Presence</button>
+	<div style="float:left; margin-top: 11%; margin-left: 2%;">
+	<input class='messagebox' id="messageboxInput" type="text" name="message" value="enter text" onclick="clearText(this)">
+	<button name="Send" onclick="send(this)">Send</button>
+	<div id="rosterdata" style="background-color: rgb(78, 118, 145);width: 153%;height: 45%;margin-top: 41px;"></div>
+	</div>
+	
+	<div id="log" style="float:right; margin-top: 12%; margin-right: 6%;background-color:grey; width: 56%; height: 50%;"></div>
+	
+	</div>
+	
+</body>
+</html>

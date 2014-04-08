@@ -1,0 +1,41 @@
+body {
+font-family: Helvetica;
+}
+
+h1 {
+text-align: center;
+}
+
+.mainframe{
+background-color:rgb(191,236,215);
+width:80%;
+height:100%;
+margin-right:auto;
+margin-left:auto;
+
+}
+
+
+.hidden {
+display: none;
+}
+
+#log {
+padding: 10px;
+}
+
+.messagebox {
+color: rgb(216,203,201);
+}
+
+.responsebox {
+	
+    width:249px;
+    height:299px;
+    background-color:Gray;
+    overflow: auto;
+    overflow-y: scroll;
+    max-width:230px;
+    max-height:100px;
+
+}

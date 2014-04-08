@@ -1,0 +1,10 @@
+.authentication{
+	font-size: 15px;
+}
+
+.birdie { 
+-webkit-transform: rotate(50deg); 
+-moz-transform: rotate(50deg); 
+-o-transform: rotate(50deg);
+-ms-transform: rotate(50deg); 
+}
